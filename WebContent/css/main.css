@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+
+
+/* Global CSS */
+
+ol, ul, h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+
+body {
+	font-family: "맑은 고딕", dotum, sans-serif;
+	font-size: small;
+	color: dimgray;
+	background-color: white;
+	
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a:visited {
+	color: dimgray;
+}
+
+a:hover {
+	color: dimgray;
+	font-weight: blod;
+}
+
+
+
+/* Header CSS */
+
+header {
+	background-color: steelblue;
+	height: 200px;
+	color: white;
+}
+
+#header-div {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#header-div {
+	text-align: right;
+}
+
+#header-div h1 {
+	text-align: center;
+	padding: 30px 0;
+}
+
+#header-div h4 {
+	text-align: center;
+}
+
+/* Content CSS */
+
+#article-div {
+	width: 1000px;
+	margin: 0 auto; 
+}
+
+#request-div {
+	float: left;
+	width: 475px;
+	height: 475px;
+	background-color: gray;
+}
+
+#upload-div {
+	margin-left: 525px;
+	width: 475px;
+	height: 475px;
+	background-color: gray;
+}
+
+
+
+
+
+/* Footer CSS */
+
+footer {
+	background-color: dimgray;
+	height: 200px; 
+}
