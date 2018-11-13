@@ -16,7 +16,7 @@
 <link type="text/css" rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-	<jsp:include page="../html/header.html" />
+	<jsp:include page="header.jsp" />
 	<section>
 		<div id="login-div">
 			<h1>Welcome!</h1>
@@ -31,6 +31,6 @@
 			</div>
 		</div>
 	</section>
-	<jsp:include page="../html/footer.html" />
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

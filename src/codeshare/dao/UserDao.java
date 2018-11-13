@@ -18,6 +18,7 @@ public class UserDao {
 	private UserDao() {
 	}
 
+	// insert
 	public int insert(Connection conn, User user) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
@@ -33,22 +34,13 @@ public class UserDao {
 		}
 	}
 
-	/**
-	 * <pre>
-	 * select
-	 * </pre>
-	 * 
-	 * @param conn
-	 * @param userId
-	 * @return UserInfo instance
-	 * @throws SQLException
-	 */
-	public User select(Connection conn, String userId) throws SQLException {
+	// select
+	public User select(Connection conn, String id) throws SQLException {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			pstmt = conn.prepareStatement("select * from users where userid = ?");
-			pstmt.setString(1, userId);
+			pstmt = conn.prepareStatement("select * from user where id = ?");
+			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
 				return makeResultSet(rs);
@@ -94,17 +86,15 @@ public class UserDao {
 	public int update(Connection conn, User inputInfo) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
-			pstmt = conn.prepareStatement("update users set userpw = ?, username = ?, phonenumber = ?," +
-					"email = ?, address = ?, introduce = ? where userid = ?");
+			pstmt = conn.prepareStatement("update users set userpw = ?, username = ?, phonenumber = ?,"
+					+ "email = ?, address = ?, introduce = ? where userid = ?");
 			/*
-			pstmt.setString(1, inputInfo.getUserPw());
-			pstmt.setString(2, inputInfo.getUserName());
-			pstmt.setString(3, inputInfo.getPhoneNumber());
-			pstmt.setString(4, inputInfo.getEmail());
-			pstmt.setString(5, inputInfo.getAddress());
-			pstmt.setString(6, inputInfo.getIntroduce());
-			pstmt.setString(7, inputInfo.getUserId());
-			*/
+			 * pstmt.setString(1, inputInfo.getUserPw()); pstmt.setString(2,
+			 * inputInfo.getUserName()); pstmt.setString(3, inputInfo.getPhoneNumber());
+			 * pstmt.setString(4, inputInfo.getEmail()); pstmt.setString(5,
+			 * inputInfo.getAddress()); pstmt.setString(6, inputInfo.getIntroduce());
+			 * pstmt.setString(7, inputInfo.getUserId());
+			 */
 			return pstmt.executeUpdate();
 		} finally {
 			JdbcUtil.close(pstmt);
@@ -120,16 +110,14 @@ public class UserDao {
 	 * @return UserInfo instance
 	 */
 	private User makeResultSet(ResultSet rs) throws SQLException {
-		 User user = new User();
-		 /*
-		userInfo.setUserId(rs.getString("userid"));
-		userInfo.setUserPw(rs.getString("userpw"));
-		userInfo.setUserName(rs.getString("username"));
-		userInfo.setPhoneNumber(rs.getString("phonenumber"));
-		userInfo.setEmail(rs.getString("email"));
-		userInfo.setAddress(rs.getString("address"));
-		userInfo.setIntroduce(rs.getString("introduce"));
-*/
+		User user = new User();
+
+		user.setId(rs.getString("id"));
+		user.setPw(rs.getString("pw"));
+		user.setLan(rs.getString("lan"));
+		user.setEmail(rs.getString("email"));
+		user.setIntro(rs.getString("intro"));
+		
 		return user;
 	}
 }

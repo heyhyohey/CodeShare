@@ -9,7 +9,7 @@
 <link type="text/css" rel="stylesheet" href="../css/post.css">
 </head>
 <body>
-	<jsp:include page="../html/header.html" />
-	<jsp:include page="../html/footer.html" />
+	<jsp:include page="header.jsp" />
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
