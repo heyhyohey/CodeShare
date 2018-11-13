@@ -7,11 +7,11 @@
 %>
 	<nav id="header-login-menu">
 		<ul>
-			<li><a href="main.jsp">Home</a></li>
+			<li><a href="main.jsp">홈페이지</a></li>
 			<li>|</li>
-			<li><a href="login.jsp">Login</a></li>
+			<li><a href="login.jsp">로그인</a></li>
 			<li>|</li>
-			<li><a href="sign_up.jsp">Sign up</a></li>
+			<li><a href="sign_up.jsp">회원가입</a></li>
 		</ul>
 	</nav>
 <%
@@ -21,11 +21,11 @@
 		<ul>
 			<li><%= id %>님 환영합니다!</li>
 			<li>|</li>
-			<li><a href="main.jsp">Home</a></li>
+			<li><a href="main.jsp">홈페이지</a></li>
 			<li>|</li>
-			<li><a href="logout.jsp">Logout</a></li>
+			<li><a href="logout.jsp">로그아웃</a></li>
 			<li>|</li>
-			<li><a href="my_page.jsp">My page</a></li>
+			<li><a href="my_page.jsp">마이 페이지</a></li>
 		</ul>
 	</nav>
 <%

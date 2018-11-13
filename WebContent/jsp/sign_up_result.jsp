@@ -1,6 +1,9 @@
-<%@page import="codeshare.service.InsertUserService"%>
+<%@ page import="codeshare.service.InsertUserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
 <jsp:useBean class="codeshare.dto.User" id="user" />
 <jsp:setProperty name="user" property="*" />
 <%
@@ -11,7 +14,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sing up result</title>
+<title>회원가입 완료</title>
 <link type="text/css" rel="stylesheet" href="../css/main.css">
 <link type="text/css" rel="stylesheet" href="../css/login.css">
 </head>
@@ -19,12 +22,12 @@
 	<jsp:include page="header.jsp" />
 	<section>
 		<div id="login-div">
-			<h1>Welcome!</h1>
+			<h1>환영합니다!</h1>
 			<div id="content">
-				<div id="input-area">
+				<div id="input-div">
 					<p>회원가입이 완료되었습니다!</p>
 				</div>
-				<div id="menu-area">
+				<div id="menu-div">
 					<button onclick="location.href='login.jsp'"
 						class="submit-button">로그인 화면으로</button>
 				</div>

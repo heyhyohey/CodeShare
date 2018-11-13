@@ -21,7 +21,7 @@ public class SelectUserService {
 	}
 	
 	// 회원 정보 출력 메서드
-	public User getInformation(String id) {
+	public User select(String id) {
 		Connection conn = null;
 		User user = null;
 		try {

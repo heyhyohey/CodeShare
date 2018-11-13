@@ -3,4 +3,9 @@
 <%
 	session.invalidate();
 %>
-<jsp:forward page="main.jsp" />
+<script>
+	alert("로그아웃 되었습니다.");
+</script>
+<%
+	response.sendRedirect("main.jsp");
+%>

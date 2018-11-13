@@ -9,26 +9,26 @@ import codeshare.exception.ServiceException;
 import codeshare.jdbc.ConnectionProvider;
 import codeshare.jdbc.JdbcUtil;
 
-// 회원가입 서비스 클래스
-public class InsertUserService {
-	private static InsertUserService instance = new InsertUserService();
-
-	public static InsertUserService getInstance() {
+// 회원정보수정 서비스 클래스
+public class UpdateUserService {
+	private static UpdateUserService instance = new UpdateUserService();
+	
+	public static UpdateUserService getInstance() {
 		return instance;
 	}
-
-	private InsertUserService() {
+	
+	private UpdateUserService() {
 	}
 	
-	// 회원가입 메서드
-	public void insertUser(User user) {
+	// 회원정보수정 메서드
+	public void update(User user) {
 		Connection conn = null;	
 		try {
 			conn = ConnectionProvider.getConnection();
 			UserDao dao = UserDao.getInstance();
-			dao.insert(conn, user);
+			dao.update(conn, user);
 		} catch (SQLException e) {
-			throw new ServiceException("유저 등록 실패: " + e.getMessage(),e);
+			throw new ServiceException("정보 수정 실패: " + e.getMessage(),e);
 		} finally {
 			JdbcUtil.close(conn);
 		}

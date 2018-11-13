@@ -33,7 +33,7 @@ public class User {
 
 	// 프로그래밍 언어 불러오기
 	public String getLan() {
-		return id;
+		return lan;
 	}
 
 	// 프로그래밍 언어 저장
@@ -53,7 +53,7 @@ public class User {
 
 	// 자기소개서 불러오기
 	public String getIntro() {
-		return id;
+		return intro;
 	}
 
 	// 자기소개서 저장

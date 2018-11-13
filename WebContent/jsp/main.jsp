@@ -3,10 +3,12 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
+	request.setCharacterEncoding("utf-8");
+
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	
-	// 넘어온 데이터가 없다면 스킵
+	// 로그인 데이터가 존재하는지 검사
 	if(id != null && pw != null) {
 		LoginService service = LoginService.getInstance();
 		// 로그인 여부 파악 후 세션 생성
@@ -27,8 +29,7 @@
 		<div id="article-div">
 			<div id="content-div">
 				<h1>손쉽게 코드를 공유하세요!</h1>
-				<p><%= session.getAttribute("id") %>님 환영합니다!<br>
-				자신의 잘 만들어진 코드를 공유하거나 필요한 코드를 요청할 수 있습니다.</p>
+				<p>자신의 잘 만들어진 코드를 공유하거나 필요한 코드를 요청할 수 있습니다.</p>
 			</div>
 			<div id="botton-div">
 				<div id="request-div" onclick="location.href='request.jsp';">

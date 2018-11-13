@@ -49,7 +49,6 @@ public class LoginService {
 			conn = ConnectionProvider.getConnection();
 			UserDao dao = UserDao.getInstance();
 			user = dao.select(conn, id);
-			System.out.println(user.getId() + user.getPw());
 			// 1. 아이디가 존재하는지 검사
 			if(user == null)
 				return false;

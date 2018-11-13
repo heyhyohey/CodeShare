@@ -53,20 +53,11 @@ public class UserDao {
 		}
 	}
 
-	/**
-	 * <pre>
-	 * delete
-	 * </pre>
-	 * 
-	 * @param conn
-	 * @param userId
-	 * @return status number
-	 * @throws SQLException
-	 */
+	// delete
 	public int delete(Connection conn, String user) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
-			pstmt = conn.prepareStatement("delete from users where userid = ?");
+			pstmt = conn.prepareStatement("delete from user where id = ?");
 			pstmt.setString(1, user);
 			return pstmt.executeUpdate();
 		} finally {
@@ -74,41 +65,23 @@ public class UserDao {
 		}
 	}
 
-	/**
-	 * <pre>
-	 * update
-	 * </pre>
-	 * 
-	 * @param inputInfo
-	 * @return status number
-	 * @throws SQLException
-	 */
-	public int update(Connection conn, User inputInfo) throws SQLException {
+	// update
+	public int update(Connection conn, User user) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
-			pstmt = conn.prepareStatement("update users set userpw = ?, username = ?, phonenumber = ?,"
-					+ "email = ?, address = ?, introduce = ? where userid = ?");
-			/*
-			 * pstmt.setString(1, inputInfo.getUserPw()); pstmt.setString(2,
-			 * inputInfo.getUserName()); pstmt.setString(3, inputInfo.getPhoneNumber());
-			 * pstmt.setString(4, inputInfo.getEmail()); pstmt.setString(5,
-			 * inputInfo.getAddress()); pstmt.setString(6, inputInfo.getIntroduce());
-			 * pstmt.setString(7, inputInfo.getUserId());
-			 */
+			pstmt = conn.prepareStatement("update user set pw = ?, lan = ?, email = ?, intro = ? where id = ?");
+			pstmt.setString(1, user.getPw());
+			pstmt.setString(2, user.getLan());
+			pstmt.setString(3, user.getEmail());
+			pstmt.setString(4, user.getIntro());
+			pstmt.setString(5, user.getId());
 			return pstmt.executeUpdate();
 		} finally {
 			JdbcUtil.close(pstmt);
 		}
 	}
 
-	/**
-	 * <pre>
-	 * ResultSet 생성 메소드
-	 * </pre>
-	 * 
-	 * @param rs
-	 * @return UserInfo instance
-	 */
+	// ResultSet 객체 생성 메소드
 	private User makeResultSet(ResultSet rs) throws SQLException {
 		User user = new User();
 
@@ -117,7 +90,7 @@ public class UserDao {
 		user.setLan(rs.getString("lan"));
 		user.setEmail(rs.getString("email"));
 		user.setIntro(rs.getString("intro"));
-		
+
 		return user;
 	}
 }

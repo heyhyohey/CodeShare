@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sign up</title>
+<title>회원가입</title>
 <link type="text/css" rel="stylesheet" href="../css/main.css">
 <link type="text/css" rel="stylesheet" href="../css/login.css">
 <link type="text/css" rel="stylesheet" href="../css/sign_up.css">
@@ -13,7 +13,7 @@
 	<jsp:include page="header.jsp" />
 	<section>
 		<div id="sign-up-div">
-			<h1>Sign Up!</h1>
+			<h1>회원가입</h1>
 			<div id="input-div">
 				<form action="sign_up_result.jsp" method="get">
 					<p><strong>*는 필수입력 항목입니다.</strong></p>

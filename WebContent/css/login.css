@@ -35,6 +35,10 @@ section {
 	display: inline;
 }
 
+#input-div p {
+	padding: 20px 0;
+}
+
 .input-form {
 	width: 400px;
 	height: 50px;
