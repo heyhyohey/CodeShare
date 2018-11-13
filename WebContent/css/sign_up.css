@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+#sign-up-div {
+	width: 400px;
+	padding: 50px;
+	margin: 0 auto;
+}
+
+#sign-up-div h1 {
+	width: 360px;
+	text-align: center;
+	padding: 20px;
+}
+
+#input-div {
+	width: 300px;
+}
+
+.input-group {
+	padding: 20px 0;	
+}

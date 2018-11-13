@@ -13,7 +13,6 @@ ol, ul, h1, h2, h3, h4, h5, h6, p {
 
 body {
 	font-family: "맑은 고딕", dotum, sans-serif;
-	font-size: small;
 	color: dimgray;
 	background-color: white;
 	
@@ -27,23 +26,25 @@ ul {
 	list-style: none;
 }
 
-a:visited {
-	color: dimgray;
-}
-
-a:hover {
-	color: dimgray;
-	font-weight: blod;
-}
-
 
 
 /* Header CSS */
 
 header {
-	background-color: steelblue;
+	background-color: darkslategray;
 	height: 200px;
 	color: white;
+}
+
+header a, header a:visited {
+	color: white;
+	text-decoration: none;	
+}
+
+header a:hover {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;	
 }
 
 #header-div {
@@ -52,40 +53,103 @@ header {
 }
 
 #header-div {
-	text-align: right;
+	text-align: center;
 }
 
 #header-div h1 {
 	text-align: center;
-	padding: 30px 0;
+	padding-top: 38px;
 }
 
-#header-div h4 {
+#header-div h3 {
 	text-align: center;
+	padding-bottom: 49px;
 }
+
+#header-login-menu {
+	font-size: small;
+	width: 100%;
+	text-align: right;
+}
+
+#header-login-menu ul li {
+	display: inline;
+}
+
+#header-main-menu {
+	font-size: small;
+	width: 100%;
+	text-align: center;
+	color: white;
+	padding: 5px 0;
+	background-color: dimgray;
+}
+
+#header-main-menu ul li {
+	display: inline;
+}
+
+#header-main-menu ul li a {
+	color: white;
+}
+
+#header-main-menu ul li a:visited {
+	color: white;
+}
+
+#header-main-menu ul li a:hover {
+	color: white;
+}
+
+
 
 /* Content CSS */
 
 #article-div {
-	width: 1000px;
-	margin: 0 auto; 
+	width: 998px;
+	padding: 50px 0;
+	margin: 0 auto;
+	border-left: 1px solid silver;
+	border-right: 1px solid silver;
+}
+
+#content-div {
+	text-align: center;
+	padding: 50px 0;
+}
+
+#content-div p {
+	padding: 50px 0;
+}
+
+#botton-div img {
+	padding-top: 50px;
+}
+
+#botton-div div {
+	color: white;
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	background-color: lightslategray;
+}
+
+#botton-div div:hover {
+	background-color: darkslategray;
 }
 
 #request-div {
 	float: left;
-	width: 475px;
-	height: 475px;
-	background-color: gray;
+}
+
+#response-div {
+	float: left;
+	margin-left: 49px;
 }
 
 #upload-div {
-	margin-left: 525px;
-	width: 475px;
-	height: 475px;
-	background-color: gray;
+	margin-left: 699px;
 }
-
-
 
 
 
@@ -93,5 +157,18 @@ header {
 
 footer {
 	background-color: dimgray;
-	height: 200px; 
+	height: 200px;
+	color: white;
+	font-size: smaller;
+	font
+}
+
+footer p{
+	padding: 5px;
+	text-align: center;
+}
+
+#copy {
+	text-align: center;
+	padding-top: 90px;
 }
