@@ -1,5 +1,5 @@
 <%@ page import="codeshare.dto.User"%>
-<%@ page import="codeshare.service.SelectUserService"%>
+<%@ page import="codeshare.user.service.SelectUserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

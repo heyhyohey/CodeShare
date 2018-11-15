@@ -19,6 +19,9 @@
 			<div id="input-div">
 				<p><%= id %>님 안녕하세요!</p>
 				<div id="menu-area">
+					<button onclick="location.href='request_list.jsp'"
+						class="submit-button">요청정보 확인</button>
+					<br>
 					<button onclick="location.href='display.jsp'"
 						class="submit-button">회원정보 확인</button>
 					<br>

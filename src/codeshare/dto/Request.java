@@ -1,18 +1,29 @@
 package codeshare.dto;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Request {
+	private int num; // 글 번호
 	private String id; // 아이디
 	private String title; // 제목
 	private String content; // 내용
-	private Date date; // 자기소개서
+	private Timestamp date; // 등록날
 	private boolean state; // 상태
 
 	public Request() {
 		super();
 	}
-
+	
+	// 글번호 불러오기
+	public int getNum() {
+		return num;
+	}
+	
+	// 글번호 저장
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
 	// 아이디 불러오기
 	public String getId() {
 		return id;
@@ -44,12 +55,12 @@ public class Request {
 	}
 	
 	// 날짜 불러오기
-	public Date getDate() {
+	public Timestamp getDate() {
 		return date;
 	}
 
 	// 날짜 저장
-	public void setDate(Date date) {
+	public void setDate(Timestamp date) {
 		this.date = date;
 	}
 	

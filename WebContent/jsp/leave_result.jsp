@@ -1,4 +1,4 @@
-<%@ page import="codeshare.service.DeleteUserService"%>
+<%@ page import="codeshare.user.service.DeleteUserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

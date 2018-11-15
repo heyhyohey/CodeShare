@@ -1,4 +1,4 @@
-<%@ page import="codeshare.service.LoginService"%>
+<%@ page import="codeshare.user.service.LoginService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -41,7 +41,7 @@
 					<h3>응답하기</h3>
 				</div>
 				<div id="upload-div" onclick="location.href='upload.jsp';">
-					<img src="../image/upload_white.png" alt="응답하기">
+					<img src="../image/upload_white.png" alt="올리기">
 					<h3>올리기</h3>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-package codeshare.service;
+package codeshare.user.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -23,14 +23,14 @@ public class LoginService {
 	// 중복 확인 메소드
 	public boolean checkId(String id) {
 		Connection conn = null;
-		User userInfo = null;
+		User user = null;
 		try {
 			conn = ConnectionProvider.getConnection();
 			UserDao dao = UserDao.getInstance();
-			userInfo = dao.select(conn, id);
+			user = dao.select(conn, id);
 
 			// 리턴 값이 있을 경우 로그인 성공
-			if (userInfo != null)
+			if (user != null)
 				return true;
 			else
 				return false;

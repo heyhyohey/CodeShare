@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+section {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#sign-up-div {
+	width: 900px;
+}
+
+#sign-up-div h1 {
+	width: 900px;
+	padding: 20px 0;
+}
+
+#request-div {
+	padding: 100px 50px;
+}
+
+.input-form {
+	width: 900px;
+	height: 50px;
+	border: 0;
+	border-bottom: 2px solid darkslategray;
+	outline: none;
+	font-size: 15px;
+}
+
+.submit-button {
+	width:900px;
+}

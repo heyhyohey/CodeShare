@@ -1,4 +1,4 @@
-package codeshare.service;
+package codeshare.user.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;

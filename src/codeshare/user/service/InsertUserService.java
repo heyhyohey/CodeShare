@@ -1,4 +1,4 @@
-package codeshare.service;
+package codeshare.user.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -21,7 +21,7 @@ public class InsertUserService {
 	}
 	
 	// 회원가입 메서드
-	public void insertUser(User user) {
+	public void insert(User user) {
 		Connection conn = null;	
 		try {
 			conn = ConnectionProvider.getConnection();

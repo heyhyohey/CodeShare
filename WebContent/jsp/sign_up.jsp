@@ -15,7 +15,7 @@
 		<div id="sign-up-div">
 			<h1>회원가입</h1>
 			<div id="input-div">
-				<form action="sign_up_result.jsp" method="get">
+				<form action="sign_up_result.jsp" method="post">
 					<p><strong>*는 필수입력 항목입니다.</strong></p>
 					<div class="input-group">
 						<b>*아이디</b><br> <input type="text" class="input-form"
