@@ -1,17 +1,27 @@
 package codeshare.dto;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
-public class Upload {
+public class Response {
+	private int num;  // 글 번호
 	private String id; // 아이디
-	private String title; // 제목
 	private String content; // 내용
-	private Date date; // 자기소개서
+	private Timestamp date; // 자기소개서
 
-	public Upload() {
+	public Response() {
 		super();
 	}
 
+	// 글 번호 불러오기
+	public int getNum() {
+		return num;
+	}
+
+	// 글 번호 저장
+	public void setNum(int num) {
+		this.num = num;
+	}
+		
 	// 아이디 불러오기
 	public String getId() {
 		return id;
@@ -20,16 +30,6 @@ public class Upload {
 	// 아이디 저장
 	public void setId(String id) {
 		this.id = id;
-	}
-	
-	// 제목 불러오기
-	public String getTitle() {
-		return title;
-	}
-
-	// 제목 저장
-	public void setTitle(String title) {
-		this.title = title;
 	}
 	
 	// 내용 불러오기
@@ -43,12 +43,12 @@ public class Upload {
 	}
 	
 	// 날짜 불러오기
-	public Date getDate() {
+	public Timestamp getDate() {
 		return date;
 	}
 
 	// 날짜 저장
-	public void setDate(Date date) {
+	public void setDate(Timestamp date) {
 		this.date = date;
 	}
 }

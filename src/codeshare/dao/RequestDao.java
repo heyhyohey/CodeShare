@@ -10,7 +10,6 @@ import java.util.Collections;
 import java.util.List;
 
 import codeshare.dto.Request;
-import codeshare.dto.User;
 import codeshare.jdbc.JdbcUtil;
 
 public class RequestDao {
@@ -120,20 +119,28 @@ public class RequestDao {
 	}
 
 	// update
-	public int update(Connection conn, User user) throws SQLException {
+	public int update(Connection conn, Request request) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
-			pstmt = conn.prepareStatement("update user set pw = ?, lan = ?, email = ?, intro = ? where id = ?");
-			pstmt.setString(1, user.getPw());
-			pstmt.setString(2, user.getLan());
-			pstmt.setString(3, user.getEmail());
-			pstmt.setString(4, user.getIntro());
-			pstmt.setString(5, user.getId());
+			pstmt = conn.prepareStatement("update request set title = ?, content = ? where num = ?");
+			pstmt.setString(1, request.getTitle());
+			pstmt.setString(2, request.getContent());
+			pstmt.setInt(3, request.getNum());
 			return pstmt.executeUpdate();
 		} finally {
 			JdbcUtil.close(pstmt);
 		}
 	}
-
-
+	
+	// update
+	public int updateState(Connection conn, int num) throws SQLException {
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement("update request set state = true where num = ?");
+			pstmt.setInt(1, num);
+			return pstmt.executeUpdate();
+		} finally {
+			JdbcUtil.close(pstmt);
+		}
+	}
 }

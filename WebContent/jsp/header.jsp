@@ -39,7 +39,7 @@
 		<ul>
 			<li><a href="request.jsp">요청하기</a></li>
 			<li>|</li>
-			<li><a href="response.jsp">응답하기</a></li>
+			<li><a href="request_list.jsp">응답하기</a></li>
 			<li>|</li>
 			<li><a href="upload.jsp">올리기</a></li>
 		</ul>

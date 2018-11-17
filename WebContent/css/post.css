@@ -11,17 +11,19 @@ tr {
 }
 
 td {
-	padding: 5px 0;
+	padding: 10px 0;
 }
 
-td a, td a:visited, td a:hover {
+td a, td a:visited, td a:hover, #sign-up-div p a, #sign-up-div p a:visited, #sign-up-div p a:hover {
 	color: dimgray;
 	text-decoration: none;
 }
 
-td a:hover {
+td a:hover, #sign-up-div p a:hover {
 	text-decoration: underline;
 }
+
+
 
 #sign-up-div p {
 	text-align: center;
@@ -33,7 +35,7 @@ td a:hover {
 	font-weight: bold;
 }
 
-.td1, .td3, .td4 {
+.td1, .td3, .td4, .td5 {
 	text-align: center;
 }
 
@@ -42,7 +44,7 @@ td a:hover {
 }
 
 .td2 {
-	width: 520px;
+	width: 420px;
 }
 
 .td3 {
@@ -51,4 +53,24 @@ td a:hover {
 
 .td4 {
 	width: 180px;
+}
+
+.td5 {
+	width: 100px;
+}
+
+.finish {
+	color: darkcyan;
+}
+
+.not-finish {
+	color: orange;
+}
+
+.input-group {
+	border-bottom: 1px solid dimgray;
+}
+
+.content-group {
+	min-height: 200px;
 }

@@ -36,11 +36,11 @@
 					<img src="../image/request_white.png" alt="요청하기">
 					<h3>요청하기</h3>
 				</div>
-				<div id="response-div" onclick="location.href='response.jsp';">
+				<div id="response-div" onclick="location.href='request_list.jsp';">
 					<img src="../image/response_white.png" alt="응답하기">
 					<h3>응답하기</h3>
 				</div>
-				<div id="upload-div" onclick="location.href='upload.jsp';">
+				<div id="upload-div" onclick="location.href='upload.jsp?page=1';">
 					<img src="../image/upload_white.png" alt="올리기">
 					<h3>올리기</h3>
 				</div>

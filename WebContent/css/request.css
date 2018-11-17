@@ -18,6 +18,10 @@ section {
 	padding: 100px 50px;
 }
 
+.input-group {
+	width: 900px;
+}
+
 .input-form {
 	width: 900px;
 	height: 50px;

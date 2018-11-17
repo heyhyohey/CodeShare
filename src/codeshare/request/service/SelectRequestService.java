@@ -6,9 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 import codeshare.dao.RequestDao;
-import codeshare.dao.UserDao;
 import codeshare.dto.Request;
-import codeshare.dto.User;
 import codeshare.exception.ServiceException;
 import codeshare.jdbc.ConnectionProvider;
 import codeshare.jdbc.JdbcUtil;

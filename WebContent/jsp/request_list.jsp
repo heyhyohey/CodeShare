@@ -29,7 +29,7 @@
 	<jsp:include page="header.jsp" />
 	<section>
 		<div id="sign-up-div">
-		<h1>요청목록</h1>
+		<h1>요청 게시판</h1>
 			<c:if test="${ !viewData.isEmpty() }">
 				<table>
 					<tr class="tr-head">
@@ -37,13 +37,25 @@
 						<td>제목</td>
 						<td>작성자</td>
 						<td>등록날짜</td>
+						<td>응답여부</td>
 					</tr>
 					<c:forEach var="item" items="${ viewData.requestList }">
 						<tr>
 							<td class="td1">${ item.num }</td>
 							<td class="td2"><a href="request_info.jsp?page=${ item.num }">${ item.title }</a></td>
 							<td class="td3">${ item.id }</td>
-							<td class="td4">${ item.date }</td>
+							<td 
+							class="td4">${ item.date }</td>
+							<td class="td5">
+								<c:choose>
+									<c:when test="${ item.state }">
+										<span class="finish">응답</span>
+									</c:when>
+									<c:otherwise>
+										<span class="not-finish">미응답</span>
+									</c:otherwise>
+								</c:choose>
+							</td>
 						</tr>
 					</c:forEach>
 				</table>
