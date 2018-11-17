@@ -1,7 +1,7 @@
-<%@page import="codeshare.request.service.RequestListView"%>
-<%@page import="codeshare.request.service.SelectRequestService"%>
+<%@page import="codeshare.upload.service.UploadListView"%>
+<%@page import="codeshare.upload.service.SelectUploadService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="../jspf/check_login.jspf" %>
 <%
@@ -11,26 +11,27 @@
 	if (pageNumberStr != null) {
 		pageNumber = Integer.parseInt(pageNumberStr);
 	}
-	SelectRequestService requestService = SelectRequestService.getInstance();
-	RequestListView viewData = requestService.getRequestList(pageNumber);
+	SelectUploadService uploadService = SelectUploadService.getInstance();
+	UploadListView viewData = uploadService.getUploadList(pageNumber);
 %>
 <c:set var="viewData" value="<%=viewData%>" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>요청 게시판</title>
+<title>공유 게시판</title>
 <link type="text/css" rel="stylesheet" href="../css/main.css">
 <link type="text/css" rel="stylesheet" href="../css/login.css">
 <link type="text/css" rel="stylesheet" href="../css/sign_up.css">
 <link type="text/css" rel="stylesheet" href="../css/request.css">
 <link type="text/css" rel="stylesheet" href="../css/post.css">
+<link type="text/css" rel="stylesheet" href="../css/upload.css">
 </head>
 <body>
 	<jsp:include page="header.jsp" />
 	<section>
 		<div id="sign-up-div">
-		<h1>요청 게시판</h1>
+		<h1>공유 게시판</h1>
 			<c:if test="${ !viewData.isEmpty() }">
 				<table>
 					<tr class="tr-head">
@@ -38,25 +39,14 @@
 						<td>제목</td>
 						<td>작성자</td>
 						<td>등록날짜</td>
-						<td>응답여부</td>
 					</tr>
-					<c:forEach var="item" items="${ viewData.requestList }">
+					<c:forEach var="item" items="${ viewData.uploadList }">
 						<tr>
 							<td class="td1">${ item.num }</td>
-							<td class="td2"><a href="request_info.jsp?page=${ item.num }">${ item.title }</a></td>
+							<td class="td2"><a href="upload_info.jsp?page=${ item.num }">${ item.title }</a></td>
 							<td class="td3">${ item.id }</td>
 							<td 
 							class="td4">${ item.date }</td>
-							<td class="td5">
-								<c:choose>
-									<c:when test="${ item.state }">
-										<span class="finish">응답</span>
-									</c:when>
-									<c:otherwise>
-										<span class="not-finish">미응답</span>
-									</c:otherwise>
-								</c:choose>
-							</td>
 						</tr>
 					</c:forEach>
 				</table>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../jspf/check_login.jspf" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +30,7 @@
 						</div>
 						<div class="input-group">
 							<b>변경할 비밀번호 재확인</b><br> <input type="password" class="input-form"
-								name="new-pw-comfirm" maxlength="10" placeholder="10자 이내 영문,숫자"><br>
+								name="new-pw-confirm" maxlength="10" placeholder="10자 이내 영문,숫자"><br>
 						</div>
 						<div class="input-group">
 							<b>변경할 관심언어</b><br> <input type="text" class="input-form"

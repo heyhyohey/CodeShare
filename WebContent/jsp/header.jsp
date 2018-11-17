@@ -37,11 +37,13 @@
 	</div>
 	<nav id="header-main-menu">
 		<ul>
-			<li><a href="request.jsp">요청하기</a></li>
+			<li><a href="request.jsp">요청</a></li>
 			<li>|</li>
-			<li><a href="request_list.jsp">응답하기</a></li>
+			<li><a href="request_list.jsp">요청목록</a></li>
 			<li>|</li>
-			<li><a href="upload.jsp">올리기</a></li>
+			<li><a href="upload.jsp">공유</a></li>
+			<li>|</li>
+			<li><a href="upload_list.jsp">공유목록</a></li>
 		</ul>
 	</nav>
 </header>

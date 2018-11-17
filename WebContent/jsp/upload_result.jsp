@@ -1,26 +1,25 @@
-<%@ page import="java.sql.Timestamp"%>
-<%@ page import="codeshare.request.service.InsertRequestService"%>
+<%@page import="codeshare.upload.service.InsertUploadService"%>
+<%@page import="java.sql.Timestamp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@ include file="../jspf/check_login.jspf" %>
 <%
 	request.setCharacterEncoding("utf-8");
 %>
-<jsp:useBean class="codeshare.dto.Request" id="userRequest" />
-<jsp:setProperty name="userRequest" property="*" />
+<jsp:useBean class="codeshare.dto.Upload" id="userUpload" />
+<jsp:setProperty name="userUpload" property="*" />
 <%
 	String id = (String)session.getAttribute("id");
-	userRequest.setId(id);
-	userRequest.setDate(new Timestamp(System.currentTimeMillis()));
-	userRequest.setState(false);
-	InsertRequestService service = InsertRequestService.getInstance();
-	service.insert(userRequest);
+	userUpload.setId(id);
+	userUpload.setDate(new Timestamp(System.currentTimeMillis()));
+	InsertUploadService service = InsertUploadService.getInstance();
+	service.insert(userUpload);
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>요청하기</title>
+<title>공유하기</title>
 <link type="text/css" rel="stylesheet" href="../css/main.css">
 <link type="text/css" rel="stylesheet" href="../css/login.css">
 </head>
@@ -31,10 +30,10 @@
 			<h1>축하합니다!</h1>
 			<div id="content">
 				<div id="input-div">
-					<p>요청이 완료되었습니다!</p>
+					<p>공유가 완료되었습니다!</p>
 				</div>
 				<div id="menu-div">
-					<button onclick="location.href='request_list.jsp'" class="submit-button">요청
+					<button onclick="location.href='upload_list.jsp'" class="submit-button">공유
 						목록으로</button>
 					<button onclick="location.href='my_page.jsp'" class="submit-button">마이페이지로</button>
 				</div>
